@@ -86,9 +86,9 @@ def main():
         for email in contactDict:
             phone = getPhone(email, apikey)
             print (email + "," + phone + "," + contactDict[email])
-            file_object.write(email + "," + phone + "," + contactDict[email])
+            file_object.write(email + "," + phone + "," + contactDict[email] + "\n")
         file_object.close()
-        
+
     except HTTPError as http_err:
         print(f'HTTP error occurred: {http_err}')
     except Exception as err:

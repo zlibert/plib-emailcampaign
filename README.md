@@ -1,3 +1,7 @@
+TODO:
+- Add Name, Lastname to the CSV
+- Detect if OS is Windows and change new line accordingly
+
 Objective:
 - Provide a csv output (contactsCampaign.csv) with contacts classified by status in order to make calls if necessary.
 
