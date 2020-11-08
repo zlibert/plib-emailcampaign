@@ -6,9 +6,11 @@ REQUIRES:
 - Requests library, to install: pip install requests
 
 OUTPUTS:
+main.py
 - Provide a csv output (contactsCampaign.csv) with contacts classified by status in order to make calls if necessary.
 - Provides shell output (same as csv file but with more process and error details)
-
+getMilitAdherent.py
+- Provides a csv output (older.csv, newer.csv, adherentes.csv, militantes.csv) based createdate and fecha_inscripcion_servel
 
 Script reads the HubSpot campaign events from the API and associated contact info, and stores the relevant status (type) where status priority is as follows:
 
