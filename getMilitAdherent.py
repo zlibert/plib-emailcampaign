@@ -60,8 +60,43 @@ for c in contact_list:
 		adherentes.append(email)
 
 
+"""
+TODO:
+
+for campaign in campaigns:
+	for event in campaign:
+		if not event['email'] in deliveredEmail:
+			deliveredEmail.append(email)
+		if event['type'] in ['open', 'click']:
+			openedEmail.append(email)
+
+
+1.- if email in adherentes and email in older and not email in contacted:
+		print
+
+2.- if email in militantes and not email in openedEmail and email in contacted:
+		print
+
+5.- if email in adherentes and email in contacted and email not in openedEmail:
+		print
+
+6.- if email in adherentes and email in newer and not email in contacted:
+		print
+
+for campaign in campaigns:
+	for event in campaign:
+		if not event['email'] in deliveredEmail:
+			deliveredEmail.append(email)
+
+
+
+"""
+
+
+
 #  Save csv files 
 file_object = open('older.csv', 'w')
+older = list(dict.fromkeys(older))
 print("- - Contacts older than " , dt_object , " : " , len(older))
 for c in older:
 	print(c)
@@ -69,6 +104,7 @@ for c in older:
 file_object.close()
 
 file_object = open('newer.csv', 'w')
+newer = list(dict.fromkeys(newer))
 print("- - Contacts newer than " , dt_object , " : " , len(newer))
 for c in newer:
 	print(c)
@@ -76,6 +112,7 @@ for c in newer:
 file_object.close()
 
 file_object = open('militantes.csv', 'w')
+militantes = list(dict.fromkeys(militantes))
 print("- - Militantes: ",len(militantes))
 for c in militantes:
 	print(c)
@@ -83,6 +120,7 @@ for c in militantes:
 file_object.close()
 
 file_object = open('adherentes.csv', 'w')
+adherentes = list(dict.fromkeys(adherentes))
 print("- - Adherentes: ",len(adherentes))
 for c in adherentes:
 	print(c)
